@@ -19,6 +19,9 @@ gem 'rack-cors'
 # Use Rspec to make and run tests
 gem "rspec-rails"
 
+# Faker to generate fake data
+gem 'faker'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

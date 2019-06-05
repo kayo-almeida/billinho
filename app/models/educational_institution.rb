@@ -8,5 +8,5 @@ class EducationalInstitution < ApplicationRecord
     validates :cnpj, numericality: { only_integer: true }
 
     # methods
-    enum type: { "Universidade": 0, "Escola": 1, "Creche": 2 }
+    enum institution_type: { "Universidade": 0, "Escola": 1, "Creche": 2 }
 end

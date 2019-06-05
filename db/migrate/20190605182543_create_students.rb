@@ -4,7 +4,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.string :cpf, null: false
       t.date :birthday, default: nil
-      t.integer :phone, default: nil
+      t.string :phone, default: nil
       t.integer :gender, null: false
       t.integer :payment_method, null: false
 

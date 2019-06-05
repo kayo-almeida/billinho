@@ -3,7 +3,7 @@ class CreateEducationalInstitutions < ActiveRecord::Migration[5.2]
     create_table :educational_institutions do |t|
       t.string :name, null: false
       t.string :cnpj, null: false
-      t.integer :type, default: nil
+      t.integer :institution_type, null: false
 
       t.timestamps
     end

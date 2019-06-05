@@ -46,6 +46,6 @@ class EducationalInstitutionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def educational_institution_params
-      params.require(:educational_institution).permit(:name, :cnpj, :type)
+      params.require(:educational_institution).permit(:name, :cnpj, :institution_type)
     end
 end

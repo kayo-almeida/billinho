@@ -46,6 +46,6 @@ class RegistrationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def registration_params
-      params.require(:registration).permit(:total_course_amount, :installments_number, :course_name, :educational_institution_id, :student_id)
+      params.require(:registration).permit(:total_course_amount, :installments_number, :due_day, :course_name, :educational_institution_id, :student_id)
     end
 end
