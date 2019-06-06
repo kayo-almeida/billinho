@@ -1,0 +1,12 @@
+{
+  "published": true,
+  "name": "Api/V1/Students Rail",
+  "end_point": "rails",
+  "http_method": "",
+  "params": [],
+  "header": {},
+  "examples": [{
+    "request": {},
+    "response": {}
+  }]
+}

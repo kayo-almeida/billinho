@@ -9,4 +9,8 @@ código a seguir:
 bundle install
 rake db:create db:migrate db:seed
 rails s
-```	 
+```	
+
+Documentação em breve
+
+Muito obrigado :)

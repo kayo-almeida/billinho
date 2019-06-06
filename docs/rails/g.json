@@ -1,0 +1,12 @@
+{
+  "published": true,
+  "name": "G Rail",
+  "end_point": "rails",
+  "http_method": "",
+  "params": [],
+  "header": {},
+  "examples": [{
+    "request": {},
+    "response": {}
+  }]
+}
