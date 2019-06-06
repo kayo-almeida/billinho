@@ -1,7 +1,12 @@
 class EducationalInstitution < ApplicationRecord
+    # relationships
+    has_many :registrations, dependent: :destroy
+    
     # validations
     validates :name, uniqueness: true
     validates :name, presence: true
+    
+    validates :institution_type, presence: true
 
     validates :cnpj, uniqueness: true
     validates :cnpj, presence: true

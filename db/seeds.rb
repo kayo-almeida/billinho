@@ -1,7 +1,7 @@
 require 'faker'
 
 ### CREATING STUDENTS
-for i in 0..9 do
+10.times do
     Student.create!({
         name: Faker::Name.unique.name,
         cpf: Faker::Number.number(11),
@@ -13,7 +13,7 @@ for i in 0..9 do
 end
 
 ## CREATING EDUCATIONAL INSTITUTION
-for i in 0..9 do
+10.times do
     EducationalInstitution.create!({
         name: Faker::Company.name,
         cnpj: Faker::Number.number(14),
