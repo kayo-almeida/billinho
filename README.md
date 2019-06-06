@@ -1,24 +1,12 @@
-# README
+# API BILLINHO | DOCUMENTAÇÃO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Rodando a aplicação em desenvolvimento
 
-Things you may want to cover:
+Primeiramente clone o projeto, em seguida acesse a pasta do projeto e então execute os seguintes comandos:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+código a seguir:
+```
+bundle install
+rake db:create db:migrate db:seed
+rails s
+```	 

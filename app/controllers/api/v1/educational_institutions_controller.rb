@@ -25,7 +25,7 @@ class Api::V1::EducationalInstitutionsController < Api::V1::ApiController
     if @educational_institution.save
       render_success @educational_institution
     else
-      render_error @educational_institution.errors
+      render_error @educational_institution.errors, true
     end
   end
 
@@ -52,6 +52,7 @@ class Api::V1::EducationalInstitutionsController < Api::V1::ApiController
         ->(name:) { where('lower(name) like ?', "%#{name.downcase}%") },
         ->(cnpj:) { where(cnpj: cnpj) },
         ->(institution_type:) { where(institution_type: institution_type) },
+        ->(sort:) { sort_by { |item| item[sort.to_sym] } }
       )
     end
 

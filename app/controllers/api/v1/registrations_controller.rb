@@ -53,6 +53,7 @@ class Api::V1::RegistrationsController < Api::V1::ApiController
         ->(installments_number:) { where(installments_number: installments_number) },
         ->(due_day:) { where(due_day: due_day) },
         ->(course_name:) { where(course_name: course_name) },
+        ->(sort:) { sort_by { |item| item[sort.to_sym] } }
       )
     end
 

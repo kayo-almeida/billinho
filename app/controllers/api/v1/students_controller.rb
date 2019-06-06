@@ -55,6 +55,7 @@ class Api::V1::StudentsController < Api::V1::ApiController
         ->(gender:) { where(gender: gender) },
         ->(payment_method:) { where(payment_method: payment_method) },
         ->(phone:) { where(phone: phone) },
+        ->(sort:) { sort_by { |item| item[sort.to_sym] } }
       )
     end
 
