@@ -609,6 +609,18 @@ Obtem os dados de um fatura específica
 }
 ```
 
+#### GET /api/v1/invoices/update-status
+Atualiza o status das faturas que estão atrasadas
+
+##### Retorno esperado:
+```
+{
+    "status": "SUCCESS",
+    "message": "successful requisition",
+    "data": {}
+}
+```
+
 ---
 
 

@@ -12,6 +12,13 @@ class Api::V1::InvoicesController < Api::V1::ApiController
     render_success Invoice.find(params[:id])
   end
 
+  # GET /invoice/update-status
+  def update_status
+    Invoice.where("due_date < ?", DateTime.now.to_date).where(status: 0).update_all(status: 1)
+    render_success
+  end
+
+
   private
     # Config filters
     def reducer_filters

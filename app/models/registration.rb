@@ -26,7 +26,7 @@ class Registration < ApplicationRecord
   after_create do
     # Check if due date has passed
     first_date = Date.new(Time.current.year, Time.current.month, self.due_day)
-    first_date = first_date + 1.month if self.due_day >= Time.current.day
+    first_date = first_date + 1.month if self.due_day < Time.current.day
 
     for i in 0..(self.installments_number - 1) do
       t = Invoice.create!({

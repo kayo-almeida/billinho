@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :invoices, only: [:index, :show]
+      match 'invoices/update-status' => 'invoices#update_status', via: :get
+      resources :invoices, only: [:index, :show] do
+        get "/update-status" => :update_status
+      end
       
       resources :registrations do
         get "/invoices/" => :invoices
